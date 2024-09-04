@@ -11,7 +11,11 @@ export default function ComputerMovesFirst() {
   useEffect(() => {
     if (computerMove) {
       setTimeout(() => {
-        computerTurn(Array(9).fill(""));
+        const randomIndex = Math.floor(Math.random() * 9);
+        const Newboard = [...board];
+        Newboard[randomIndex] = "X";
+        setboard(Newboard);
+        setmove(true);
       }, 700);
         setComputerMove(false);
     }    
@@ -122,6 +126,16 @@ export default function ComputerMovesFirst() {
     return "continue";
   };
 
+  function updateFirstMove(BOARD){
+    setTimeout(() => {
+      const randomIndex = Math.floor(Math.random() * 9);
+      const Newboard = [...BOARD];
+      Newboard[randomIndex] = "X";
+      setboard(Newboard);
+      setmove(true);
+    }, 700);
+  }
+
   return (
     <div
       className="h-screen"
@@ -166,9 +180,7 @@ export default function ComputerMovesFirst() {
                 setgameover(false);
                 setmove(false); 
                 setComputerMove(true);
-                setTimeout(() => {
-                    computerTurn(Array(9).fill("")); 
-                }, 700);
+                updateFirstMove(Array(9).fill(""));
               }}
             >
               Reset
