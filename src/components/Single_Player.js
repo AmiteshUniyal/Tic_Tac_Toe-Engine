@@ -136,7 +136,7 @@ export default function SinglePlayer() {
           {board.map((value, index) => (
             <div
               key={index}
-              className="h-12 w-12 sm:h-20 sm:w-20 bg-yellow-100 rounded-2xl text-2xl sm:text-6xl text-center pt-1 font-bold text-green-800 cursor-pointer"
+              className="h-12 w-12 sm:h-20 sm:w-20 bg-yellow-100 rounded sm:rounded-2xl text-4xl sm:text-6xl text-center pt-0 sm:pt-1 font-bold text-green-800 cursor-pointer"
               onClick={() => handleClick(index)}
             >
               {value}
