@@ -23,14 +23,14 @@ export default function SelectFirstMove() {
         <div className="flex flex-col sm:flex-row justify-center items-center gap-8 sm:gap-16 p-10">
           <div>
             <Link to={"/SinglePlayer"}>
-              <button className="bg-gray-700 text-white p-2 border rounded">
+              <button className="bg-gray-700 text-white pl-6 pr-6 pt-1 pb-1 border rounded">
                 Yes
               </button>
             </Link>
           </div>
           <div>
             <Link to={"/ComputerMovesFirst"}>
-              <button className="bg-gray-700 text-white p-2 border rounded">
+              <button className="bg-gray-700 text-white pl-6 pr-6 pt-1 pb-1 border rounded">
                 No
               </button>
             </Link>
